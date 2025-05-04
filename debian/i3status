@@ -1,0 +1,40 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 5
+}
+
+order += "wireless wlp6s0"
+order += "cpu_usage"
+order += "memory"
+order += "volume master"
+order += "tztime local"
+
+wireless wlp6s0 {
+        format_up = "%essid @%quality"
+        format_down = "No wifi"
+}
+
+cpu_usage {
+        format = "%usage"
+        degraded_threshold = "50"
+        max_threshold = "75"
+        format_above_degraded_threshold = "CPU: %usage"
+}
+
+memory {
+        format = "%used"
+        threshold_degraded = "50"
+        threshold_critical = "75"
+        format_degraded = "RAM: %percentage_used"
+}
+
+volume master {
+        format = "♪: %volume"
+        device = "default"
+        mixer = "PCM"
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M"
+}
