@@ -6,17 +6,16 @@ Install packages
 apt install sudo xorg xinit xinput i3 rofi feh dunst pulseaudio pavucontrol fonts-recommended fonts-noto-cjk breeze-icon-theme fcitx5 fcitx5-unikey brightnessctl netselect-apt hwinfo htop git alacritty fish ranger chromium python3 python3-pip nodejs npm yt-dlp sqlite3 kate vlc inkscape audacity obs-studio flameshot
 ```
 
-Move the config files
+Link the config files
 ```bash
-mv i3 ~/.config/i3/config
-mv i3status ~/.config/i3/config
-mv fish ~/.config/fish/config.fish
-mv ranger ~/.config/ranger/rc.conf
-mv nano ~/.config/nano/nanorc
+ln -s ~/.config/Linux-rice/debian/fish ~/.config/fish/config.fish
+ln -s ~/.config/Linux-rice/debian/i3 ~/.config/i3/config
+ln -s ~/.config/Linux-rice/debian/i3status ~/.config/i3/config
+ln -s ~/.config/Linux-rice/debian/nano ~/.config/nano/nanorc
+ln -s ~/.config/Linux-rice/debian/ranger ~/.config/ranger/rc.conf
 ```
 
 ## Customization
-
 Background and lock screen 
 ```bash
 convert lock.jpg -resize 1366x768^ lock.png # convert to png for use with i3lock
