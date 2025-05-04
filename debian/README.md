@@ -65,3 +65,11 @@ Chrome extentions
 Change OS language
 
 Set up git authentication
+
+openTabletDriver [set up dot net](https://learn.microsoft.com/en-us/dotnet/core/install/linux-debian?tabs=dotnet8)
+```bash
+wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+sudo apt-get install -y aspnetcore-runtime-8.0
+```
