@@ -4,6 +4,8 @@ set $mod Mod4
 exec --no-startup-id "xinput set-button-map $(xinput list --id-only 'SynPS/2 Synaptics TouchPad') 3 2 1 4 5 6 7"
 exec --no-startup-id "feh --bg-max ~/Pictures/bg.jpg"
 exec --no-startup-id "fcitx5"
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock -i ~/Pictures/lock.png --nofork"
 
 # App launcher
 bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
@@ -57,13 +59,6 @@ bar {
 
 # Font for window titles
 font pango:monospace 8
-
-# Start XDG autostart .desktop files using dex.
-exec --no-startup-id dex --autostart --environment i3
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock -i ~/Pictures/lock.png --nofork"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
