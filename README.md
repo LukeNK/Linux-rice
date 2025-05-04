@@ -24,7 +24,7 @@ Link the config files
 ```bash
 ln -s ~/.config/Linux-rice/fish ~/.config/fish/config.fish
 ln -s ~/.config/Linux-rice/i3 ~/.config/i3/config
-ln -s ~/.config/Linux-rice/i3status ~/.config/i3/config
+ln -s ~/.config/Linux-rice/i3status ~/.config/i3status/config
 ln -s ~/.config/Linux-rice/nano ~/.config/nano/nanorc
 ln -s ~/.config/Linux-rice/ranger ~/.config/ranger/rc.conf
 ```
