@@ -8,7 +8,7 @@
 ## Initialization
 Install packages
 ```bash
-apt install sudo xorg xinit xinput i3 rofi feh dunst pulseaudio pavucontrol fonts-recommended fonts-noto-cjk breeze-icon-theme fcitx5 fcitx5-unikey brightnessctl netselect-apt hwinfo htop git alacritty fish ranger chromium python3 python3-pip nodejs npm 7zip yt-dlp sqlite3 kate vlc inkscape audacity obs-studio flameshot
+apt install sudo xorg xinit xinput i3 rofi feh dunst pulseaudio pavucontrol fonts-recommended fonts-noto-cjk breeze-icon-theme fcitx5 fcitx5-unikey fcitx5-configtool brightnessctl netselect-apt hwinfo htop git alacritty fish ranger chromium python3 python3-pip nodejs npm 7zip yt-dlp sqlite3 kate vlc inkscape audacity obs-studio flameshot
 
 pacman -Syu xorg-xinput rofi feh dunst pavucontrol noto-fonts breeze-icons fcitx5 fcitx5-unikey brightnessctl hwinfo man-db htop git alacritty fish ranger chromium python python-pip nodejs npm 7zip yt-dlp sqlite3 kate vlc inkscape audacity obs-studio flameshot
 ```
