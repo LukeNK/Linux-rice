@@ -11,7 +11,7 @@ if status is-interactive
             if string match -r '^[^#]*=' $line
                 set key (echo $line | cut -d '=' -f 1)
                 set value (echo $line | cut -d '=' -f 2-)
-                set -g $key $value
+                set -g $key (string escape (string expand $value))
             end
         end
 
@@ -23,11 +23,11 @@ if status is-interactive
         cp ~/.config/Linux-rice/nano ~/.config/nano/nanorc
         cp ~/.config/Linux-rice/ranger ~/.config/ranger/rc.conf
 
-        sed -i "s/__BG__/(string escape (string expand $__BG__))/g" ~/.config/i3/config
-        sed -i "s/__LOCK__/(string escape (string expand $__LOCK__))/g" ~/.config/i3/config
-        sed -i "s/__INPUT_NAME__/(string escape (string expand $__INPUT_NAME__))/g" ~/.config/i3/config
-        sed -i "s/__INPUT_BTN__/(string escape (string expand $__INPUT_BTN__))/g" ~/.config/i3/config
-        sed -i "s/__WIRELESS__/(string escape (string expand $__WIRELESS__))/g" ~/.config/i3/config
+        sed -i "s/__BG__/$__BG__/g" ~/.config/i3/config
+        sed -i "s/__LOCK__/$__LOCK__/g" ~/.config/i3/config
+        sed -i "s/__INPUT_NAME__/$__INPUT_NAME__/g" ~/.config/i3/config
+        sed -i "s/__INPUT_BTN__/$__INPUT_BTN__/g" ~/.config/i3/config
+        sed -i "s/__WIRELESS__/$__WIRELESS__/g" ~/.config/i3/config
 
     end
 end
