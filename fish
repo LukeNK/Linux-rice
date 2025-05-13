@@ -12,7 +12,6 @@ if status is-interactive
                 set key (echo $line | cut -d '=' -f 1)
                 set value (echo $line | cut -d '=' -f 2-)
                 set -g $key $value
-                echo $value
             end
         end
 
