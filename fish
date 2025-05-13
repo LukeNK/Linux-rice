@@ -11,12 +11,14 @@ if status is-interactive
             if string match -r '^[^#]*=' $line
                 set key (echo $line | cut -d '=' -f 1)
                 set value (echo $line | cut -d '=' -f 2-)
-                set -g $key (string escape (string expand $value))
+                set -g $key (string escape $value)
             end
         end
 
         # set up config
-        cd ~/.config/Linux-rice; git fetch; git pull;
+        cd ~/.config/Linux-rice
+        git fetch
+        git pull
         cp ~/.config/Linux-rice/fish ~/.config/fish/config.fish
         cp ~/.config/Linux-rice/i3 ~/.config/i3/config
         cp ~/.config/Linux-rice/i3status ~/.config/i3status/config
@@ -27,7 +29,8 @@ if status is-interactive
         sed -i "s/__LOCK__/$__LOCK__/g" ~/.config/i3/config
         sed -i "s/__INPUT_NAME__/$__INPUT_NAME__/g" ~/.config/i3/config
         sed -i "s/__INPUT_BTN__/$__INPUT_BTN__/g" ~/.config/i3/config
-        sed -i "s/__WIRELESS__/$__WIRELESS__/g" ~/.config/i3/config
+        sed -i "s/__WIRELESS__/$__WIRELESS__/g" ~/.config/i3status/config
 
+        cd ~
     end
 end
