@@ -20,36 +20,18 @@ git clone https://github.com/LukeNK/Linux-rice
 cd Linux-rice
 ```
 
-Link the config files
+Create config directories
 ```bash
-ln -s ~/.config/Linux-rice/fish ~/.config/fish/config.fish
-ln -s ~/.config/Linux-rice/i3 ~/.config/i3/config
-ln -s ~/.config/Linux-rice/i3status ~/.config/i3status/config
-ln -s ~/.config/Linux-rice/nano ~/.config/nano/nanorc
-ln -s ~/.config/Linux-rice/ranger ~/.config/ranger/rc.conf
+mkdir ~/.config/fish
+mkdir ~/.config/i3
+mkdir ~/.config/i3status
+mkdir ~/.config/nano
+mkdir ~/.config/ranger
 ```
 
-## Customization
-Background and lock screen 
+Copy customization file (will be ignored by git)
 ```bash
-convert lock.jpg -resize 1366x768^ lock.png # convert to png for use with i3lock
-```
-Check these two lines in `i3/config`:
-```bash
-convert lock.jpg -resize 1366x768^ lock.png # convert to png for use with i3lock
-
-exec --no-startup-id "feh --bg-max ~/Pictures/bg.jpg" # check bg file location
-i3lock -i ~/Pictures/lock.png # check lock bg file location
-```
-
-Mouse button. Edit this line in `i3/config`
-```
-xinput set-button-map $(xinput list --id-only 'SynPS/2 Synaptics TouchPad') 3 2 1 4 5 6 7 # set correct map
-```
-
-Check `i3status/config` for this line. Set it to appropriate device and change the part with the customization down bellow.
-```bash
-order += "wireless wlp6s0"
+cp template.env .env
 ```
 
 ## App settings
@@ -86,3 +68,13 @@ sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 sudo apt-get install -y aspnetcore-runtime-8.0
 ```
+
+## Customization
+Background (`__BG__`) and lock screen (`__LOCK__`). Use the following script to convert:
+```bash
+convert lock.jpg -resize 1366x768^ lock.png # convert to png for use with i3lock
+```
+
+Mouse device with (`__INPUT_NAME__`) and the arrangement of the buttons (`__INPUT_BTN__` usually is `1 2 3`)
+
+Wireless device (`__WIRELESS__`) usually is `wlan0`, but I have seen worse.

@@ -6,6 +6,15 @@ if status is-interactive
         set -gx QT_IM_MODULE 'fcitx'
         set -gx XMODIFIERS '@im=fcitx'
 
+        # load config variables
+        for line in (cat ~/.config/Linux-rice/.env | string trim)
+            if string match -r '^[^#]*=' $line
+                set key (echo $line | cut -d '=' -f 1)
+                set value (echo $line | cut -d '=' -f 2-)
+                set -g $key $value
+            end
+        end
+
         # set up config
         cd ~/.config/Linux-rice; git fetch; git pull;
         cp ~/.config/Linux-rice/fish ~/.config/fish/config.fish
@@ -13,5 +22,9 @@ if status is-interactive
         cp ~/.config/Linux-rice/i3status ~/.config/i3status/config
         cp ~/.config/Linux-rice/nano ~/.config/nano/nanorc
         cp ~/.config/Linux-rice/ranger ~/.config/ranger/rc.conf
+
+        sed -i "s/__BG__/$bg/g" ~/.config/i3/config
+        sed -i "s/__LOCK__/$lock/g" ~/.config/i3/config
+
     end
 end
