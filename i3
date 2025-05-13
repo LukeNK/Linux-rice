@@ -2,10 +2,10 @@ set $mod Mod4
 
 # Start up apps
 exec --no-startup-id "xinput set-button-map $(xinput list --id-only '__INPUT_NAME__') __INPUT_BTN__"
-exec --no-startup-id "feh --bg-max '__BG__'"
+exec --no-startup-id "feh --bg-max __BG__"
 exec --no-startup-id "fcitx5"
 exec --no-startup-id "dex --autostart --environment i3"
-exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock -i '__LOCK__' --nofork"
+exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock -i __LOCK__ --nofork"
 
 # App launcher
 bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
@@ -23,7 +23,7 @@ mode "[s]leep, [l]ogout, [p]oweroff, [esc]ape" {
     bindsym Escape mode default
 }
 bindsym $mod+shift+e mode "[s]leep, [l]ogout, [p]oweroff, [esc]ape"
-bindsym $mod+l exec --no-startup-id "i3lock -i '__LOCK__' --nofork"; mode default
+bindsym $mod+l exec --no-startup-id "i3lock -i __LOCK__ --nofork"; mode default
 
 # Visual
 hide_edge_borders both

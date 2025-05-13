@@ -4,13 +4,13 @@ general {
         interval = 5
 }
 
-order += "wireless wlp6s0"
+order += "wireless __WIRELESS__"
 order += "cpu_usage"
 order += "memory"
 order += "volume master"
 order += "tztime local"
 
-wireless wlp6s0 {
+wireless __WIRELESS__ {
         format_up = "%essid @%quality"
         format_down = "No wifi"
 }
