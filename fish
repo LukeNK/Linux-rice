@@ -11,7 +11,7 @@ if status is-interactive
             if string match -r '^[^#]*=' $line
                 set key (echo $line | cut -d '=' -f 1)
                 set value (echo $line | cut -d '=' -f 2-)
-                set -g $key (string escape $value)
+                set -g $key $value
             end
         end
 
