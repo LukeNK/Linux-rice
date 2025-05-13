@@ -11,7 +11,7 @@ exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock -i __LOCK__ --nof
 bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
 bindsym $mod+Shift+d exec --no-startup-id "chromium"
 bindsym $mod+Return exec --no-startup-id "alacritty"
-bindsym $mod+Shift+Return exec --no-startup-id "alacritty -e ranger Desktop"
+bindsym $mod+Shift+Return exec --no-startup-id "alacritty -e ranger"
 bindsym Print exec --no-startup-id "flameshot gui -c"
 bindsym $mod+n open
 
