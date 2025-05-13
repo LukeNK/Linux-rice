@@ -23,11 +23,11 @@ if status is-interactive
         cp ~/.config/Linux-rice/nano ~/.config/nano/nanorc
         cp ~/.config/Linux-rice/ranger ~/.config/ranger/rc.conf
 
-        sed -i "s/__BG__/(string escape $__BG__)/g" ~/.config/i3/config
-        sed -i "s/__LOCK__/(string escape $__LOCK__)/g" ~/.config/i3/config
-        sed -i "s/__INPUT_NAME__/(string escape $__INPUT_NAME__)/g" ~/.config/i3/config
-        sed -i "s/__INPUT_BTN__/(string escape $__INPUT_BTN__)/g" ~/.config/i3/config
-        sed -i "s/__WIRELESS__/(string escape $__WIRELESS__)/g" ~/.config/i3/config
+        sed -i "s/__BG__/(string escape (string expand $__BG__))/g" ~/.config/i3/config
+        sed -i "s/__LOCK__/(string escape (string expand $__LOCK__))/g" ~/.config/i3/config
+        sed -i "s/__INPUT_NAME__/(string escape (string expand $__INPUT_NAME__))/g" ~/.config/i3/config
+        sed -i "s/__INPUT_BTN__/(string escape (string expand $__INPUT_BTN__))/g" ~/.config/i3/config
+        sed -i "s/__WIRELESS__/(string escape (string expand $__WIRELESS__))/g" ~/.config/i3/config
 
     end
 end
