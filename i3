@@ -6,7 +6,6 @@ exec --no-startup-id "feh --bg-max ~/Pictures/bg.jpg"
 exec --no-startup-id "fcitx5"
 exec --no-startup-id "dex --autostart --environment i3"
 exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock -i ~/Pictures/lock.png --nofork"
-exec --no-startup-id "cd ~/.config/Linux-rice; git fetch; git pull;"
 
 # App launcher
 bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
