@@ -70,6 +70,8 @@ sudo apt-get install -y aspnetcore-runtime-8.0
 ```
 
 ## Customization
+*Please make sure there is no space before and after the equal sign.*
+
 Background (`__BG__`) and lock screen (`__LOCK__`). Use the following script to convert:
 ```bash
 convert lock.jpg -resize 1366x768^ lock.png # convert to png for use with i3lock
