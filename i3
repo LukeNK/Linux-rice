@@ -2,7 +2,7 @@ set $mod Mod4
 
 # Start up apps
 exec --no-startup-id "xinput set-button-map $(xinput list --id-only '__INPUT_NAME__') __INPUT_BTN__"
-exec --no-startup-id "feh --bg-max __BG__"
+exec --no-startup-id "feh --bg-fill --no-fehbg __BG__"
 exec --no-startup-id "fcitx5"
 exec --no-startup-id "dex --autostart --environment i3"
 exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock -i __LOCK__ --nofork"
