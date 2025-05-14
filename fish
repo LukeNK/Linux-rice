@@ -24,6 +24,7 @@ if status is-interactive
         cp ~/.config/Linux-rice/i3status ~/.config/i3status/config
         cp ~/.config/Linux-rice/nano ~/.config/nano/nanorc
         cp ~/.config/Linux-rice/ranger ~/.config/ranger/rc.conf
+        cp ~/.config/Linux-rice/htop ~/.config/htop/htoprc
 
         # dynamic customization
         sed -i 's|__BG__|'$__BG__'|g' ~/.config/i3/config
