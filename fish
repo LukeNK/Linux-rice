@@ -19,12 +19,13 @@ if status is-interactive
         cd ~/.config/Linux-rice
         git fetch
         git pull
-        cp ~/.config/Linux-rice/fish ~/.config/fish/config.fish
-        cp ~/.config/Linux-rice/i3 ~/.config/i3/config
-        cp ~/.config/Linux-rice/i3status ~/.config/i3status/config
-        cp ~/.config/Linux-rice/nano ~/.config/nano/nanorc
-        cp ~/.config/Linux-rice/ranger ~/.config/ranger/rc.conf
-        cp ~/.config/Linux-rice/htop ~/.config/htop/htoprc
+        cp fish ~/.config/fish/config.fish
+        cp i3 ~/.config/i3/config
+        cp i3status ~/.config/i3status/config
+        cp nano ~/.config/nano/nanorc
+        cp ranger ~/.config/ranger/rc.conf
+        cp htop ~/.config/htop/htoprc
+        cp gtk3 ~/.config/gtk-3.0/settings.ini
 
         # dynamic customization
         sed -i 's|__BG__|'$__BG__'|g' ~/.config/i3/config
