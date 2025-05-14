@@ -53,7 +53,6 @@ Chrome extentions
 `Fcitx5-configtool`
 - unikey setup (addon > x input method front end > check)
 - turn of share input stage
-- environment variable for GTK + Qt
 
 `flameshot config` adjust available tools
 
@@ -70,7 +69,7 @@ sudo apt-get install -y aspnetcore-runtime-8.0
 ```
 
 ## Customization
-*Please make sure there is no space before and after the equal sign.*
+*Please make sure there is no space before and after the equal sign in the `.env` file.*
 
 Background (`__BG__`) and lock screen (`__LOCK__`). Use the following script to convert:
 ```bash
