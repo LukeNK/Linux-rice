@@ -23,6 +23,8 @@ if status is-interactive
         if test "$local" != "$remote"
             echo "Updating Linux-rice, remember to logout"
             git pull
+        else
+            clear
         end
 
         # Copy config files
