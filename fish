@@ -18,7 +18,14 @@ if status is-interactive
         # set up config
         cd ~/.config/Linux-rice
         git fetch
-        git pull
+        set local (git rev-parse HEAD)
+        set remote (git rev-parse origin/main)
+        if test "$local" != "$remote"
+            echo "Updating Linux-rice, remember to logout"
+            git pull
+        end
+
+        # Copy config files
         cp fish ~/.config/fish/config.fish
         cp i3 ~/.config/i3/config
         cp i3status ~/.config/i3status/config
@@ -36,5 +43,6 @@ if status is-interactive
 
         # return to home
         cd ~
+        neofetch
     end
 end
