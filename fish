@@ -21,7 +21,6 @@ if status is-interactive
         set local (git rev-parse HEAD)
         set remote (git rev-parse origin/main)
         if test "$local" != "$remote"
-            echo "Updating Linux-rice, remember to logout"
             git pull
         else
             clear
