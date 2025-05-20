@@ -14,6 +14,7 @@ bindsym $mod+Return exec --no-startup-id "alacritty"
 bindsym $mod+Shift+Return exec --no-startup-id "alacritty -e ranger"
 bindsym Print exec --no-startup-id "flameshot gui -c"
 bindsym $mod+n open
+bindsym $mod+Shift+n exec --no-startup-id "alacritty -e tty-clock -s -B -c -C 6"
 
 # State control
 mode "[s]leep, [l]ogout, [p]oweroff, [esc]ape" {
