@@ -6,6 +6,8 @@ exec --no-startup-id "feh --bg-fill --no-fehbg __BG__"
 exec --no-startup-id "fcitx5"
 exec --no-startup-id "dex --autostart --environment i3"
 exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock -i __LOCK__ --nofork"
+exec --no-startup-id "alacritty -e syncthing --no-browser"
+exec --no-startup-id "cd media-tracker; alacritty -e node index.js"
 
 # App launcher
 bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
